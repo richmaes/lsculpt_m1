@@ -406,10 +406,10 @@ bool obj::obj_parser::parse(std::istream& istream)
               if (stringstream.eof()) {
                 ++number_of_faces;
                 if (!treat_vt_as_vn && triangular_face_geometric_vertices_texture_vertices_callback_) {
-                  triangular_face_geometric_vertices_texture_vertices_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v2, vt2), std::tr1::make_tuple(v3, vt3));
+                  triangular_face_geometric_vertices_texture_vertices_callback_(std::make_tuple(v1, vt1), std::make_tuple(v2, vt2), std::make_tuple(v3, vt3));
                 }
                 if (treat_vt_as_vn && triangular_face_geometric_vertices_vertex_normals_callback_) {
-                  triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v2, vt2), std::tr1::make_tuple(v3, vt3));
+                  triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1), std::make_tuple(v2, vt2), std::make_tuple(v3, vt3));
                 }
               }
               else {
@@ -462,32 +462,32 @@ bool obj::obj_parser::parse(std::istream& istream)
                   ++number_of_faces;
                   if (flags_ & triangulate_faces) {
 					if (!treat_vt_as_vn && triangular_face_geometric_vertices_texture_vertices_callback_) {
-					  triangular_face_geometric_vertices_texture_vertices_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v2, vt2), std::tr1::make_tuple(v3, vt3));
-					  triangular_face_geometric_vertices_texture_vertices_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v3, vt3), std::tr1::make_tuple(v4, vt4));
+					  triangular_face_geometric_vertices_texture_vertices_callback_(std::make_tuple(v1, vt1), std::make_tuple(v2, vt2), std::make_tuple(v3, vt3));
+					  triangular_face_geometric_vertices_texture_vertices_callback_(std::make_tuple(v1, vt1), std::make_tuple(v3, vt3), std::make_tuple(v4, vt4));
 					}
 					if (treat_vt_as_vn && triangular_face_geometric_vertices_vertex_normals_callback_) {
-					  triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v2, vt2), std::tr1::make_tuple(v3, vt3));
-					  triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v3, vt3), std::tr1::make_tuple(v4, vt4));
+					  triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1), std::make_tuple(v2, vt2), std::make_tuple(v3, vt3));
+					  triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1), std::make_tuple(v3, vt3), std::make_tuple(v4, vt4));
 					}
                   }
                   else {
                     if (!treat_vt_as_vn && quadrilateral_face_geometric_vertices_texture_vertices_callback_) {
-                      quadrilateral_face_geometric_vertices_texture_vertices_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v2, vt2), std::tr1::make_tuple(v3, vt3), std::tr1::make_tuple(v4, vt4));
+                      quadrilateral_face_geometric_vertices_texture_vertices_callback_(std::make_tuple(v1, vt1), std::make_tuple(v2, vt2), std::make_tuple(v3, vt3), std::make_tuple(v4, vt4));
                     }
                     if (treat_vt_as_vn && quadrilateral_face_geometric_vertices_vertex_normals_callback_) {
-                      quadrilateral_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v2, vt2), std::tr1::make_tuple(v3, vt3), std::tr1::make_tuple(v4, vt4));
+                      quadrilateral_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1), std::make_tuple(v2, vt2), std::make_tuple(v3, vt3), std::make_tuple(v4, vt4));
                     }
                   }
                 }
                 else {
                   if (flags_ & triangulate_faces) {
                     if (!treat_vt_as_vn && triangular_face_geometric_vertices_texture_vertices_callback_) {
-                      triangular_face_geometric_vertices_texture_vertices_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v2, vt2), std::tr1::make_tuple(v3, vt3));
-                      triangular_face_geometric_vertices_texture_vertices_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v3, vt3), std::tr1::make_tuple(v4, vt4));
+                      triangular_face_geometric_vertices_texture_vertices_callback_(std::make_tuple(v1, vt1), std::make_tuple(v2, vt2), std::make_tuple(v3, vt3));
+                      triangular_face_geometric_vertices_texture_vertices_callback_(std::make_tuple(v1, vt1), std::make_tuple(v3, vt3), std::make_tuple(v4, vt4));
                     }
 					if (treat_vt_as_vn && triangular_face_geometric_vertices_vertex_normals_callback_) {
-					  triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v2, vt2), std::tr1::make_tuple(v3, vt3));
-					  triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v3, vt3), std::tr1::make_tuple(v4, vt4));
+					  triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1), std::make_tuple(v2, vt2), std::make_tuple(v3, vt3));
+					  triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1), std::make_tuple(v3, vt3), std::make_tuple(v4, vt4));
 					}
                     index_type v_previous = v4, vt_previous = vt4;
                     do {
@@ -532,10 +532,10 @@ bool obj::obj_parser::parse(std::istream& istream)
 						  }
                         }
 						if (!treat_vt_as_vn && triangular_face_geometric_vertices_texture_vertices_callback_) {
-                          triangular_face_geometric_vertices_texture_vertices_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v_previous, vt_previous), std::tr1::make_tuple(v, vt));
+                          triangular_face_geometric_vertices_texture_vertices_callback_(std::make_tuple(v1, vt1), std::make_tuple(v_previous, vt_previous), std::make_tuple(v, vt));
 						}
 						if (treat_vt_as_vn && triangular_face_geometric_vertices_vertex_normals_callback_) {
-                          triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1), std::tr1::make_tuple(v_previous, vt_previous), std::tr1::make_tuple(v, vt));
+                          triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1), std::make_tuple(v_previous, vt_previous), std::make_tuple(v, vt));
 						}
                         v_previous = v, vt_previous = vt;
                       }
@@ -693,7 +693,7 @@ bool obj::obj_parser::parse(std::istream& istream)
               if (stringstream.eof()) {
                 ++number_of_faces;
                 if (triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_) {
-                  triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1, vn1), std::tr1::make_tuple(v2, vt2, vn2), std::tr1::make_tuple(v3, vt3, vn3));
+                  triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1, vn1), std::make_tuple(v2, vt2, vn2), std::make_tuple(v3, vt3, vn3));
                 }
               }
               else {
@@ -733,21 +733,21 @@ bool obj::obj_parser::parse(std::istream& istream)
                   ++number_of_faces;
                   if (flags_ & triangulate_faces) {
                     if (triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_) {
-                      triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1, vn1), std::tr1::make_tuple(v2, vt2, vn2), std::tr1::make_tuple(v3, vt3, vn3));
-                      triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1, vn1), std::tr1::make_tuple(v3, vt3, vn3), std::tr1::make_tuple(v4, vt4, vn4));
+                      triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1, vn1), std::make_tuple(v2, vt2, vn2), std::make_tuple(v3, vt3, vn3));
+                      triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1, vn1), std::make_tuple(v3, vt3, vn3), std::make_tuple(v4, vt4, vn4));
                     }
                   }
                   else {
                     if (quadrilateral_face_geometric_vertices_texture_vertices_vertex_normals_callback_) {
-                      quadrilateral_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1, vn1), std::tr1::make_tuple(v2, vt2, vn2), std::tr1::make_tuple(v3, vt3, vn3), std::tr1::make_tuple(v4, vt4, vn4));
+                      quadrilateral_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1, vn1), std::make_tuple(v2, vt2, vn2), std::make_tuple(v3, vt3, vn3), std::make_tuple(v4, vt4, vn4));
                     }
                   }
                 }
                 else {
                   if (flags_ & triangulate_faces) {
                     if (triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_) {
-                      triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1, vn1), std::tr1::make_tuple(v2, vt2, vn2), std::tr1::make_tuple(v3, vt3, vn3));
-                      triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1, vn1), std::tr1::make_tuple(v3, vt3, vn3), std::tr1::make_tuple(v4, vt4, vn4));
+                      triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1, vn1), std::make_tuple(v2, vt2, vn2), std::make_tuple(v3, vt3, vn3));
+                      triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1, vn1), std::make_tuple(v3, vt3, vn3), std::make_tuple(v4, vt4, vn4));
                     }
                     index_type v_previous = v4, vt_previous = vt4, vn_previous = vn4;
                     do {
@@ -779,7 +779,7 @@ bool obj::obj_parser::parse(std::istream& istream)
                           }
                         }
                         if (triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_) {
-                          triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vt1, vn1), std::tr1::make_tuple(v_previous, vt_previous, vn_previous), std::tr1::make_tuple(v, vt, vn));
+                          triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_(std::make_tuple(v1, vt1, vn1), std::make_tuple(v_previous, vt_previous, vn_previous), std::make_tuple(v, vt, vn));
                         }
                         v_previous = v, vt_previous = vt, vn_previous = vn;
                       }
@@ -898,7 +898,7 @@ bool obj::obj_parser::parse(std::istream& istream)
             if (stringstream.eof()) {
               ++number_of_faces;
               if (triangular_face_geometric_vertices_vertex_normals_callback_) {
-                triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vn1), std::tr1::make_tuple(v2, vn2), std::tr1::make_tuple(v3, vn3));
+                triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vn1), std::make_tuple(v2, vn2), std::make_tuple(v3, vn3));
               }
             }
             else {
@@ -934,21 +934,21 @@ bool obj::obj_parser::parse(std::istream& istream)
                 ++number_of_faces;
                 if (flags_ & triangulate_faces) {
                   if (triangular_face_geometric_vertices_vertex_normals_callback_) {
-                    triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vn1), std::tr1::make_tuple(v2, vn2), std::tr1::make_tuple(v3, vn3));
-                    triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vn1), std::tr1::make_tuple(v3, vn3), std::tr1::make_tuple(v4, vn4));
+                    triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vn1), std::make_tuple(v2, vn2), std::make_tuple(v3, vn3));
+                    triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vn1), std::make_tuple(v3, vn3), std::make_tuple(v4, vn4));
                   }
                 }
                 else {
                   if (quadrilateral_face_geometric_vertices_vertex_normals_callback_) {
-                    quadrilateral_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vn1), std::tr1::make_tuple(v2, vn2), std::tr1::make_tuple(v3, vn3), std::tr1::make_tuple(v4, vn4));
+                    quadrilateral_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vn1), std::make_tuple(v2, vn2), std::make_tuple(v3, vn3), std::make_tuple(v4, vn4));
                   }
                 }
               }
               else {
                 if (flags_ & triangulate_faces) {
                   if (triangular_face_geometric_vertices_vertex_normals_callback_) {
-                    triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vn1), std::tr1::make_tuple(v2, vn2), std::tr1::make_tuple(v3, vn3));
-                    triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vn1), std::tr1::make_tuple(v3, vn3), std::tr1::make_tuple(v4, vn4));
+                    triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vn1), std::make_tuple(v2, vn2), std::make_tuple(v3, vn3));
+                    triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vn1), std::make_tuple(v3, vn3), std::make_tuple(v4, vn4));
                   }
                   index_type v_previous = v4, vn_previous = vn4;
                   do {
@@ -976,7 +976,7 @@ bool obj::obj_parser::parse(std::istream& istream)
                         }
                       }
                       if (triangular_face_geometric_vertices_vertex_normals_callback_) {
-                        triangular_face_geometric_vertices_vertex_normals_callback_(std::tr1::make_tuple(v1, vn1), std::tr1::make_tuple(v_previous, vn_previous), std::tr1::make_tuple(v, vn));
+                        triangular_face_geometric_vertices_vertex_normals_callback_(std::make_tuple(v1, vn1), std::make_tuple(v_previous, vn_previous), std::make_tuple(v, vn));
                       }
                       v_previous = v, vn_previous = vn;
                     }

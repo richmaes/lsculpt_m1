@@ -48,7 +48,7 @@
 
 using namespace std;
 
-#define lsculpt_version "0.5.0"
+#define lsculpt_version "0.6.0"
 
 LSculptMainWin::LSculptMainWin(QWidget *parent) :
 	QMainWindow(parent),

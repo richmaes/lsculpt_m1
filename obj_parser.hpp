@@ -26,7 +26,7 @@
 #include <istream>
 #include <string>
 
-#include <tr1/functional>
+#include <functional>
 
 #include "obj.hpp"
 
@@ -35,38 +35,38 @@ namespace obj {
 class obj_parser
 {
 public:
-  typedef std::tr1::function<void (std::size_t, const std::string&)> info_callback_type;
-  typedef std::tr1::function<void (std::size_t, const std::string&)> warning_callback_type;
-  typedef std::tr1::function<void (std::size_t, const std::string&)> error_callback_type;
-  typedef std::tr1::function<void (float_type, float_type, float_type)> geometric_vertex_callback_type;
-  typedef std::tr1::function<void (float_type, float_type)> texture_vertex_callback_type;
-  typedef std::tr1::function<void (float_type, float_type, float_type)> vertex_normal_callback_type;
-  typedef std::tr1::function<void (index_type, index_type, index_type)> triangular_face_geometric_vertices_callback_type;
-  typedef std::tr1::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> triangular_face_geometric_vertices_texture_vertices_callback_type;
-  typedef std::tr1::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> triangular_face_geometric_vertices_vertex_normals_callback_type;
-  typedef std::tr1::function<void (const index_3_tuple_type&, const index_3_tuple_type&, const index_3_tuple_type&)> triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_type;
-  typedef std::tr1::function<void (index_type, index_type, index_type, index_type)> quadrilateral_face_geometric_vertices_callback_type;
-  typedef std::tr1::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> quadrilateral_face_geometric_vertices_texture_vertices_callback_type;
-  typedef std::tr1::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> quadrilateral_face_geometric_vertices_vertex_normals_callback_type;
-  typedef std::tr1::function<void (const index_3_tuple_type&, const index_3_tuple_type&, const index_3_tuple_type&, const index_3_tuple_type&)> quadrilateral_face_geometric_vertices_texture_vertices_vertex_normals_callback_type;
-  typedef std::tr1::function<void (index_type, index_type, index_type)> polygonal_face_geometric_vertices_begin_callback_type;
-  typedef std::tr1::function<void (index_type)> polygonal_face_geometric_vertices_vertex_callback_type;
-  typedef std::tr1::function<void ()> polygonal_face_geometric_vertices_end_callback_type;
-  typedef std::tr1::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> polygonal_face_geometric_vertices_texture_vertices_begin_callback_type;
-  typedef std::tr1::function<void (const index_2_tuple_type&)> polygonal_face_geometric_vertices_texture_vertices_vertex_callback_type;
-  typedef std::tr1::function<void ()> polygonal_face_geometric_vertices_texture_vertices_end_callback_type;
-  typedef std::tr1::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> polygonal_face_geometric_vertices_vertex_normals_begin_callback_type;
-  typedef std::tr1::function<void (const index_2_tuple_type&)> polygonal_face_geometric_vertices_vertex_normals_vertex_callback_type;
-  typedef std::tr1::function<void ()> polygonal_face_geometric_vertices_vertex_normals_end_callback_type;
-  typedef std::tr1::function<void (const index_3_tuple_type&, const index_3_tuple_type&, const index_3_tuple_type&)> polygonal_face_geometric_vertices_texture_vertices_vertex_normals_begin_callback_type;
-  typedef std::tr1::function<void (const index_3_tuple_type&)> polygonal_face_geometric_vertices_texture_vertices_vertex_normals_vertex_callback_type;
-  typedef std::tr1::function<void ()> polygonal_face_geometric_vertices_texture_vertices_vertex_normals_end_callback_type;
-  typedef std::tr1::function<void (const std::string&)> group_name_callback_type;
-  typedef std::tr1::function<void (size_type)> smoothing_group_callback_type;
-  typedef std::tr1::function<void (const std::string&)> object_name_callback_type;
-  typedef std::tr1::function<void (const std::string&)> material_library_callback_type;
-  typedef std::tr1::function<void (const std::string&)> material_name_callback_type;
-  typedef std::tr1::function<void (const std::string&)> comment_callback_type;
+  typedef std::function<void (std::size_t, const std::string&)> info_callback_type;
+  typedef std::function<void (std::size_t, const std::string&)> warning_callback_type;
+  typedef std::function<void (std::size_t, const std::string&)> error_callback_type;
+  typedef std::function<void (float_type, float_type, float_type)> geometric_vertex_callback_type;
+  typedef std::function<void (float_type, float_type)> texture_vertex_callback_type;
+  typedef std::function<void (float_type, float_type, float_type)> vertex_normal_callback_type;
+  typedef std::function<void (index_type, index_type, index_type)> triangular_face_geometric_vertices_callback_type;
+  typedef std::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> triangular_face_geometric_vertices_texture_vertices_callback_type;
+  typedef std::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> triangular_face_geometric_vertices_vertex_normals_callback_type;
+  typedef std::function<void (const index_3_tuple_type&, const index_3_tuple_type&, const index_3_tuple_type&)> triangular_face_geometric_vertices_texture_vertices_vertex_normals_callback_type;
+  typedef std::function<void (index_type, index_type, index_type, index_type)> quadrilateral_face_geometric_vertices_callback_type;
+  typedef std::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> quadrilateral_face_geometric_vertices_texture_vertices_callback_type;
+  typedef std::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> quadrilateral_face_geometric_vertices_vertex_normals_callback_type;
+  typedef std::function<void (const index_3_tuple_type&, const index_3_tuple_type&, const index_3_tuple_type&, const index_3_tuple_type&)> quadrilateral_face_geometric_vertices_texture_vertices_vertex_normals_callback_type;
+  typedef std::function<void (index_type, index_type, index_type)> polygonal_face_geometric_vertices_begin_callback_type;
+  typedef std::function<void (index_type)> polygonal_face_geometric_vertices_vertex_callback_type;
+  typedef std::function<void ()> polygonal_face_geometric_vertices_end_callback_type;
+  typedef std::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> polygonal_face_geometric_vertices_texture_vertices_begin_callback_type;
+  typedef std::function<void (const index_2_tuple_type&)> polygonal_face_geometric_vertices_texture_vertices_vertex_callback_type;
+  typedef std::function<void ()> polygonal_face_geometric_vertices_texture_vertices_end_callback_type;
+  typedef std::function<void (const index_2_tuple_type&, const index_2_tuple_type&, const index_2_tuple_type&)> polygonal_face_geometric_vertices_vertex_normals_begin_callback_type;
+  typedef std::function<void (const index_2_tuple_type&)> polygonal_face_geometric_vertices_vertex_normals_vertex_callback_type;
+  typedef std::function<void ()> polygonal_face_geometric_vertices_vertex_normals_end_callback_type;
+  typedef std::function<void (const index_3_tuple_type&, const index_3_tuple_type&, const index_3_tuple_type&)> polygonal_face_geometric_vertices_texture_vertices_vertex_normals_begin_callback_type;
+  typedef std::function<void (const index_3_tuple_type&)> polygonal_face_geometric_vertices_texture_vertices_vertex_normals_vertex_callback_type;
+  typedef std::function<void ()> polygonal_face_geometric_vertices_texture_vertices_vertex_normals_end_callback_type;
+  typedef std::function<void (const std::string&)> group_name_callback_type;
+  typedef std::function<void (size_type)> smoothing_group_callback_type;
+  typedef std::function<void (const std::string&)> object_name_callback_type;
+  typedef std::function<void (const std::string&)> material_library_callback_type;
+  typedef std::function<void (const std::string&)> material_name_callback_type;
+  typedef std::function<void (const std::string&)> comment_callback_type;
   typedef int flags_type;
   typedef enum {
     parse_blank_lines_as_comment = 1 << 0,

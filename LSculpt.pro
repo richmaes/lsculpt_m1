@@ -1,9 +1,7 @@
 # -------------------------------------------------
 # Project created by QtCreator 2010-04-22T21:11:11
 # -------------------------------------------------
-# QT += opengl
-QT += widgets \
-    core
+QT += widgets
 TARGET = LSculpt
 TEMPLATE = app
 

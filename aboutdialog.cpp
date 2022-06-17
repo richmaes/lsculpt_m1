@@ -9,7 +9,7 @@ AboutDialog::AboutDialog(char *version, QWidget *parent) :
     ui->setupUi(this);
 
 	// Change text box background color to same as parent (ie. transparent)
-	QColor bg = this->palette().color(QPalette::Background);
+	QColor bg = this->palette().color(QPalette::Window);
 	QPalette p = ui->textEdit->palette();
 	p.setColor(QPalette::Base, bg);
     ui->textEdit->setPalette(p);

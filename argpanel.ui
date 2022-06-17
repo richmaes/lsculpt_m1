@@ -34,8 +34,8 @@
   <widget class="QPushButton" name="runLSculptBtn">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>600</y>
+     <x>410</x>
+     <y>590</y>
      <width>131</width>
      <height>23</height>
     </rect>
@@ -47,263 +47,10 @@
     <string>Update Preview</string>
    </property>
   </widget>
-  <widget class="QGroupBox" name="groupBox_4">
-   <property name="geometry">
-    <rect>
-     <x>690</x>
-     <y>0</y>
-     <width>580</width>
-     <height>211</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Size &amp;&amp; Positioning</string>
-   </property>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>12</x>
-      <y>54</y>
-      <width>261</width>
-      <height>151</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Distance to offset origin:</string>
-    </property>
-    <widget class="QWidget" name="formLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>22</y>
-       <width>222</width>
-       <height>123</height>
-      </rect>
-     </property>
-     <layout class="QFormLayout" name="formLayout">
-      <property name="fieldGrowthPolicy">
-       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-      </property>
-      <property name="verticalSpacing">
-       <number>6</number>
-      </property>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>X:</string>
-        </property>
-        <property name="buddy">
-         <cstring>offsetXDSpin</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QDoubleSpinBox" name="offsetXDSpin">
-        <property name="toolTip">
-         <string>Offset the Mesh's origin by this much in X direction</string>
-        </property>
-        <property name="minimum">
-         <double>-5000000.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>5000000.000000000000000</double>
-        </property>
-        <property name="value">
-         <double>0.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>Y:</string>
-        </property>
-        <property name="buddy">
-         <cstring>offsetYDSpin</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QDoubleSpinBox" name="offsetYDSpin">
-        <property name="toolTip">
-         <string>Offset the Mesh's origin by this much in Y direction</string>
-        </property>
-        <property name="minimum">
-         <double>-5000000.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>5000000.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_5">
-        <property name="text">
-         <string>Z:</string>
-        </property>
-        <property name="buddy">
-         <cstring>offsetZDSpin</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QDoubleSpinBox" name="offsetZDSpin">
-        <property name="toolTip">
-         <string>Offset the Mesh's origin by this much in Z direction</string>
-        </property>
-        <property name="minimum">
-         <double>-5000000.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>5000000.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QCheckBox" name="centerCheck">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="toolTip">
-         <string>Re-center the Mesh at origin</string>
-        </property>
-        <property name="text">
-         <string>Re-center Mesh at Origin</string>
-        </property>
-        <property name="checked">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>100</y>
-      <width>191</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Model Scale:</string>
-    </property>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>6</x>
-       <y>19</y>
-       <width>183</width>
-       <height>62</height>
-      </rect>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QDoubleSpinBox" name="scaleDSpinold">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>60</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Grow or shrink the Mesh by this amount overall</string>
-        </property>
-        <property name="minimum">
-         <double>-5000000.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>5000000.000000000000000</double>
-        </property>
-        <property name="value">
-         <double>1.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>10</y>
-      <width>191</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Up Direction &amp;&amp; Rotation:</string>
-    </property>
-    <widget class="QWidget" name="formLayoutWidget_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>176</width>
-       <height>57</height>
-      </rect>
-     </property>
-     <layout class="QFormLayout" name="formLayout_2">
-      <property name="fieldGrowthPolicy">
-       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-      </property>
-      <item row="0" column="0">
-       <widget class="QRadioButton" name="upYRadio">
-        <property name="toolTip">
-         <string>Change the Mesh's UP direction</string>
-        </property>
-        <property name="text">
-         <string>Y</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QRadioButton" name="upZRadio">
-        <property name="toolTip">
-         <string>Change the Mesh's UP direction</string>
-        </property>
-        <property name="text">
-         <string>Z</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Rotate mesh:</string>
-        </property>
-        <property name="buddy">
-         <cstring>rotateDSpin</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QDoubleSpinBox" name="rotateDSpin">
-        <property name="toolTip">
-         <string>Rotate the Mesh this many degrees around its UP direction</string>
-        </property>
-        <property name="maximum">
-         <double>360.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-  </widget>
   <widget class="QPushButton" name="hideLDViewBtn">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>290</x>
      <y>590</y>
      <width>99</width>
      <height>27</height>
@@ -313,207 +60,466 @@
     <string>Hide Preview</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="emptyCheck">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>640</y>
-     <width>135</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="toolTip">
-    <string>Create an empty shell (use with disconnected or overlapping surfaces that otherwise result in lots of artifacts)</string>
-   </property>
-   <property name="text">
-    <string>Empty Shell</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radioButton">
-   <property name="geometry">
-    <rect>
-     <x>510</x>
-     <y>660</y>
-     <width>117</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>RadioButton</string>
-   </property>
-  </widget>
-  <widget class="QGroupBox" name="groupBox_5">
-   <property name="geometry">
-    <rect>
-     <x>650</x>
-     <y>210</y>
-     <width>571</width>
-     <height>221</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Conversion</string>
-   </property>
-   <widget class="QWidget" name="formLayoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>24</y>
-      <width>343</width>
-      <height>95</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_4">
-     <property name="fieldGrowthPolicy">
-      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-     </property>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>LEGO Part:</string>
-       </property>
-       <property name="buddy">
-        <cstring>partCombo</cstring>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="partCombo">
-       <property name="toolTip">
-        <string>Use this LEGO part in the LDraw file created by LSculpt</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>1 x 1 plate</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1 x 1 tile</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>simple 1x1 plate (fast)</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>simple 1x1 tile (really fast)</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>Part Color:</string>
-       </property>
-       <property name="buddy">
-        <cstring>colorCombo</cstring>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QComboBox" name="colorCombo">
-       <property name="toolTip">
-        <string>Choose how the parts in the LEGO model will be colored</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>All the same Color</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Color by Layers</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Color by Orientation</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_10">
-       <property name="text">
-        <string>Min Base Studs Up:</string>
-       </property>
-       <property name="buddy">
-        <cstring>baseSpin</cstring>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QSpinBox" name="baseSpin">
-       <property name="toolTip">
-        <string>Use a base of Studs Up parts for this many bottom Mesh layers</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>130</y>
-      <width>334</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QCheckBox" name="showPlatesCheck">
-       <property name="text">
-        <string>Show Plates</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="showMeshCheck">
-       <property name="text">
-        <string>Show Mesh</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="showGridCheck">
-       <property name="text">
-        <string>Show Grid</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>30</y>
-     <width>491</width>
-     <height>521</height>
+     <x>20</x>
+     <y>20</y>
+     <width>521</width>
+     <height>551</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
     <item>
-     <widget class="QGroupBox" name="groupBox_6">
+     <widget class="QGroupBox" name="groupBox_4">
       <property name="title">
        <string>Size &amp;&amp; Positioning</string>
       </property>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>261</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Distance to offset origin:</string>
+       </property>
+       <widget class="QWidget" name="formLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>22</y>
+          <width>222</width>
+          <height>123</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <property name="verticalSpacing">
+          <number>6</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>X:</string>
+           </property>
+           <property name="buddy">
+            <cstring>offsetXDSpin</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="offsetXDSpin">
+           <property name="toolTip">
+            <string>Offset the Mesh's origin by this much in X direction</string>
+           </property>
+           <property name="minimum">
+            <double>-5000000.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>5000000.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Y:</string>
+           </property>
+           <property name="buddy">
+            <cstring>offsetYDSpin</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="offsetYDSpin">
+           <property name="toolTip">
+            <string>Offset the Mesh's origin by this much in Y direction</string>
+           </property>
+           <property name="minimum">
+            <double>-5000000.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>5000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Z:</string>
+           </property>
+           <property name="buddy">
+            <cstring>offsetZDSpin</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QDoubleSpinBox" name="offsetZDSpin">
+           <property name="toolTip">
+            <string>Offset the Mesh's origin by this much in Z direction</string>
+           </property>
+           <property name="minimum">
+            <double>-5000000.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>5000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QCheckBox" name="centerCheck">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="toolTip">
+            <string>Re-center the Mesh at origin</string>
+           </property>
+           <property name="text">
+            <string>Re-center Mesh at Origin</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>100</y>
+         <width>191</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Model Scale:</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>20</y>
+         <width>191</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Up Direction &amp;&amp; Rotation:</string>
+       </property>
+       <widget class="QWidget" name="formLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>176</width>
+          <height>57</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_2">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="upYRadio">
+           <property name="toolTip">
+            <string>Change the Mesh's UP direction</string>
+           </property>
+           <property name="text">
+            <string>Y</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QRadioButton" name="upZRadio">
+           <property name="toolTip">
+            <string>Change the Mesh's UP direction</string>
+           </property>
+           <property name="text">
+            <string>Z</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Rotate mesh:</string>
+           </property>
+           <property name="buddy">
+            <cstring>rotateDSpin</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="rotateDSpin">
+           <property name="toolTip">
+            <string>Rotate the Mesh this many degrees around its UP direction</string>
+           </property>
+           <property name="maximum">
+            <double>360.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>120</y>
+         <width>183</width>
+         <height>62</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QDoubleSpinBox" name="scaleDSpinold">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Grow or shrink the Mesh by this amount overall</string>
+          </property>
+          <property name="minimum">
+           <double>-5000000.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>5000000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox_7">
+     <widget class="QGroupBox" name="groupBox_5">
       <property name="title">
        <string>Conversion</string>
       </property>
+      <widget class="QWidget" name="formLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>24</y>
+         <width>343</width>
+         <height>95</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_4">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>LEGO Part:</string>
+          </property>
+          <property name="buddy">
+           <cstring>partCombo</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="partCombo">
+          <property name="toolTip">
+           <string>Use this LEGO part in the LDraw file created by LSculpt</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>1 x 1 plate</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>1 x 1 tile</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>simple 1x1 plate (fast)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>simple 1x1 tile (really fast)</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Part Color:</string>
+          </property>
+          <property name="buddy">
+           <cstring>colorCombo</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="colorCombo">
+          <property name="toolTip">
+           <string>Choose how the parts in the LEGO model will be colored</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>All the same Color</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Color by Layers</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Color by Orientation</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>Min Base Studs Up:</string>
+          </property>
+          <property name="buddy">
+           <cstring>baseSpin</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="baseSpin">
+          <property name="toolTip">
+           <string>Use a base of Studs Up parts for this many bottom Mesh layers</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>334</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QCheckBox" name="showPlatesCheck">
+          <property name="text">
+           <string>Show Plates</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="showMeshCheck">
+          <property name="text">
+           <string>Show Mesh</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="showGridCheck">
+          <property name="text">
+           <string>Show Grid</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>137</width>
+         <height>108</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QCheckBox" name="emptyCheck">
+          <property name="toolTip">
+           <string>Create an empty shell (use with disconnected or overlapping surfaces that otherwise result in lots of artifacts)</string>
+          </property>
+          <property name="text">
+           <string>Empty Shell</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="studsUpCheck">
+          <property name="toolTip">
+           <string>Use only Studs Up parts</string>
+          </property>
+          <property name="text">
+           <string>Studs Up only</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="maxDetailRadio">
+          <property name="toolTip">
+           <string>Create a LEGO model that is the closest match to the Mesh as possible.  Could result in some seriously tricky building.</string>
+          </property>
+          <property name="text">
+           <string>Highest Detail</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_2">
+          <property name="toolTip">
+           <string>Create a LEGO model that's as easy to build as possible.  May lose some accuracy in favor of buildability.</string>
+          </property>
+          <property name="text">
+           <string>Easiest to Build</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
     <item>
@@ -521,394 +527,339 @@
       <property name="title">
        <string>Display</string>
       </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>930</x>
-     <y>110</y>
-     <width>137</width>
-     <height>108</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QCheckBox" name="studsUpCheck">
-      <property name="toolTip">
-       <string>Use only Studs Up parts</string>
-      </property>
-      <property name="text">
-       <string>Studs Up only</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="maxDetailRadio">
-      <property name="toolTip">
-       <string>Create a LEGO model that is the closest match to the Mesh as possible.  Could result in some seriously tricky building.</string>
-      </property>
-      <property name="text">
-       <string>Highest Detail</string>
-      </property>
-      <property name="checked">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="radioButton_2">
-      <property name="toolTip">
-       <string>Create a LEGO model that's as easy to build as possible.  May lose some accuracy in favor of buildability.</string>
-      </property>
-      <property name="text">
-       <string>Easiest to Build</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>500</y>
-     <width>51</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>430</y>
-     <width>239</width>
-     <height>129</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_3">
-    <item>
-     <widget class="QRadioButton" name="lengthRadio">
-      <property name="toolTip">
-       <string/>
-      </property>
-      <property name="text">
-       <string>Specify Output Size</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="scaleRadio">
-      <property name="toolTip">
-       <string/>
-      </property>
-      <property name="text">
-       <string>Import Size from Mesh</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <layout class="QFormLayout" name="formLayout_3">
-      <property name="fieldGrowthPolicy">
-       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-      </property>
-      <item row="0" column="0">
-       <widget class="QLabel" name="unitsLabel">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Output Units:</string>
-        </property>
-        <property name="buddy">
-         <cstring>unitsCombo</cstring>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QComboBox" name="unitsCombo">
-        <property name="maximumSize">
-         <size>
-          <width>120</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string/>
-        </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>239</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <property name="text">
-          <string>LEGO Studs</string>
-         </property>
+         <widget class="QRadioButton" name="lengthRadio">
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Specify Output Size</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
         <item>
-         <property name="text">
-          <string>LDraw Units</string>
-         </property>
+         <widget class="QRadioButton" name="scaleRadio">
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Import Size from Mesh</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <property name="text">
-          <string>Millimeters</string>
-         </property>
+         <layout class="QFormLayout" name="formLayout_3">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="unitsLabel">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Output Units:</string>
+            </property>
+            <property name="buddy">
+             <cstring>unitsCombo</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="unitsCombo">
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string/>
+            </property>
+            <item>
+             <property name="text">
+              <string>LEGO Studs</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>LDraw Units</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Millimeters</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Centimeters</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Meters</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Inches</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Feet</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="scaleLabel">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Output Size:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QDoubleSpinBox" name="scaleDSpin">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="toolTipDuration">
+             <number>-4</number>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="maximum">
+             <double>10240.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>32.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
-        <item>
-         <property name="text">
-          <string>Centimeters</string>
-         </property>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>60</y>
+         <width>241</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Up</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>Meters</string>
-         </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Left</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>Inches</string>
-         </property>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="nudgeZ">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>Feet</string>
-         </property>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Right</string>
+          </property>
+         </widget>
         </item>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="scaleLabel">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>100</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Output Size:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QDoubleSpinBox" name="scaleDSpin">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>120</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string/>
-        </property>
-        <property name="toolTipDuration">
-         <number>-4</number>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="maximum">
-         <double>10240.000000000000000</double>
-        </property>
-        <property name="value">
-         <double>32.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="gridLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>570</y>
-     <width>241</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_7">
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Up</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Left</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="3">
-     <widget class="QLineEdit" name="nudgeZ">
-      <property name="minimumSize">
-       <size>
-        <width>50</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>50</width>
-        <height>16777215</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>Right</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QSlider" name="sliderY">
-      <property name="minimum">
-       <number>-20</number>
-      </property>
-      <property name="maximum">
-       <number>20</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="tickPosition">
-       <enum>QSlider::TicksBelow</enum>
-      </property>
-      <property name="tickInterval">
-       <number>10</number>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QSlider" name="sliderZ">
-      <property name="minimum">
-       <number>-20</number>
-      </property>
-      <property name="maximum">
-       <number>20</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="tickPosition">
-       <enum>QSlider::TicksBelow</enum>
-      </property>
-      <property name="tickInterval">
-       <number>10</number>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QLabel" name="label_13">
-      <property name="text">
-       <string>Back</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2">
-     <widget class="QLabel" name="label_11">
-      <property name="text">
-       <string>Down</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_12">
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>Front</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="3">
-     <widget class="QLineEdit" name="nudgeX">
-      <property name="minimumSize">
-       <size>
-        <width>50</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>50</width>
-        <height>16777215</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="3">
-     <widget class="QLineEdit" name="nudgeY">
-      <property name="minimumSize">
-       <size>
-        <width>50</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>50</width>
-        <height>16777215</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QSlider" name="sliderX">
-      <property name="minimum">
-       <number>-20</number>
-      </property>
-      <property name="maximum">
-       <number>20</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="tickPosition">
-       <enum>QSlider::TicksBelow</enum>
-      </property>
-      <property name="tickInterval">
-       <number>10</number>
-      </property>
+        <item row="1" column="1">
+         <widget class="QSlider" name="sliderY">
+          <property name="minimum">
+           <number>-20</number>
+          </property>
+          <property name="maximum">
+           <number>20</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBelow</enum>
+          </property>
+          <property name="tickInterval">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSlider" name="sliderZ">
+          <property name="minimum">
+           <number>-20</number>
+          </property>
+          <property name="maximum">
+           <number>20</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBelow</enum>
+          </property>
+          <property name="tickInterval">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Back</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>Down</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Front</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="nudgeX">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="nudgeY">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSlider" name="sliderX">
+          <property name="minimum">
+           <number>-20</number>
+          </property>
+          <property name="maximum">
+           <number>20</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBelow</enum>
+          </property>
+          <property name="tickInterval">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
